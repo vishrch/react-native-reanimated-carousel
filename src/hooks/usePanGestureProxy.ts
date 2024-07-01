@@ -23,7 +23,7 @@ export const usePanGestureProxy = (
   } = customization;
 
   const gesture = useMemo(() => {
-    const gesture = Gesture.Pan();
+    const gesture = Gesture.Pan().runOnJS(true);
 
     // Save the original gesture callbacks
     const originalGestures = {
